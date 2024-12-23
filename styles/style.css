@@ -147,12 +147,12 @@ footer {
 }
 
 .biography, .research {
-    display: flex; /* Align text and media side by side */
-    justify-content: space-between; /* Space between text and media */
-    align-items: center; /* Vertically align items */
-    margin-left: 200px; /* Align sections to the right of the navbar */
+    margin-left: 200px; /* Align to the right of the navbar */
     padding: 2rem;
+    
 }
+
+
 
 .c1 {
     flex: 1; /* Text section takes up available space */
@@ -174,15 +174,16 @@ footer {
     margin-bottom: 1rem; /* Add spacing below media */
 }
 
-.media video {
-    max-width: 100%; /* Make the video responsive */
-    max-height: 400px; /* Limit the height to control size */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Crop the video content to fill the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 0 auto; /* Center the video horizontally */
+.media iframe {
+    width: 100%; /* Make the iframe responsive */
+    max-width: 560px; /* Set a maximum width */
+    height: 300px; 
+    max-height: 560px;
+    margin-bottom: 1rem; /* Add spacing below the video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for style */
+    borderradius: 10px; /* Optional: Add rounded corners */
 }
+
 
 .media.gallery {
     display: flex; /* Arrange images in a row */
