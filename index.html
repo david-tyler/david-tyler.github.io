@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>David-Tyler Ighedosa | Portfolio Website</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>David-Tyler Ighedosa</h1>
+
+        </div>
+
+        <div class="social">
+            <a href="mailto:ighedosadt@gmail.com"> Email</a>
+            <a href="https://github.com/david-tyler"> Github</a>
+            <a href="https://www.linkedin.com/in/david-tyler-ighedosa-7a5626229/"> LinkedIn</a>
+                
+        </div>
+
+    </header>
+    <div class="sidenav">
+        <nav>
+            <ul>
+                <li><a href="#biography">About Me</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section id="biography" class="biography">
+        <div class="c1">
+            <h2>About Me</h2>
+            <hr class="line-bar">
+            <p>
+                Hi! I'm David and I'm a final year undergraduate student at Texas A&M University at College Station.
+                I am majoring in Computer Science with a minor in Game Design & Development and working 
+                as an undergraduate research assistant advised by Dr. Edgar Rojas-Muñoz. I have an interest in fullstack development
+                in software engineering as well as augmented/virtual reality development and computer graphics.
+            </p>
+        </div>
+        <div class="portrait">
+            <img src="Images/portrait photo.jpeg" alt="Profile Photo of David-Tyler Ighedosa">
+        </div>
+    </section>
+
+    <section id="research" class="research">
+        <div class="c1">
+            <h2>Research</h2>
+            <hr class="line-bar">
+            <p>
+                Advised by Dr. Edgar Rojas-Muñoz, I contributed to the development of BurnCareXR, 
+                an immersive mixed reality system aimed at training medical personnel in burn patient care. 
+                My role involved implementing computer vision and augmented reality technologies to enable real-time tracking of a 3D hand model, 
+                ensuring seamless alignment with a real hand. This required proficiency in Unity and ManoMotion to develop an efficient and 
+                responsive system for accurate motion tracking.
+            </p>
+        </div>
+        <div class="media">
+            <video controls>
+                <source src="Videos/Hand Tracking.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <div class="c1">
+            <h2>Projects</h2>
+            <hr class="line-bar">
+        </div>
+
+        <div class="project">
+            <div class="c1">
+                <h3>Mess Waffles Point-of-Sale Website</h3>
+                <p>
+                    Developed a web application for restaurant operations using Java, Spring Boot, PostgreSQL, and React. 
+                    The platform supports role-based access, allowing customers to order, employees to manage orders, and managers to view reports 
+                    and update the user base. Built a REST API for database interactions and implemented secure authentication with OAuth 2.0 
+                    and Google’s authorization server.
+                </p>
+            </div>
+            <div class="media">
+                <video controls>
+                    <source src="Videos/POSWebsiteVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="c1">
+                <h3>Pokémon AR</h3>
+                <p>
+                    Pokémon AR is an augmented reality mystery game developed using Unity and Vuforia SDK for iOS and Android.
+                    Players solve puzzles and uncover clues in a Pokémon-themed universe, featuring interactive gameplay mechanics 
+                    and event-based object activation programmed in C#. The game integrates 3D models, animations, and sound effects 
+                    to create immersive AR environments that enhance player immersion.
+                </p>
+            </div>
+            <div class="media">
+                <video controls>
+                    <source src="Videos/VIST 689 Trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="c1">
+                <h3>Ray Tracer</h3>
+                <p>
+                    Created a Ray Tracer built in C++ using OpenGL to simulate realistic lighting and visual effects. 
+                    It features Blinn-Phong shading, multiple light sources, shadows, and reflections, enabling the creation of dynamic and visually rich scenes.
+                    Custom-designed scenes demonstrate the ray tracer's capabilities in rendering lifelike graphics and advanced lighting techniques.
+                </p>
+            </div>
+              <div class="media gallery">
+                <figure>
+                    <img src="Images/Ray Tracer Shadows.png" alt="Shadows" class="zoomable">
+                    <figcaption>Shadows</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/Ray Tracer Multiple Lights.png" alt="Multiple Lights" class="zoomable">
+                    <figcaption>Multiple Lights</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/Ray Tracer Reflections.png" alt="Reflections" class="zoomable">
+                    <figcaption>Reflections</figcaption>
+                </figure>
+            </div>
+        </div>
+        <!-- Modal for Zoom -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </section>
+ 
+
+</body>
+<script>
+    // Get modal elements
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeModal = document.querySelector(".close");
+
+    // Add click event to all zoomable images
+    document.querySelectorAll(".zoomable").forEach((img) => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        });
+    });
+
+    // Close modal on clicking the close button
+    closeModal.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // Close modal on clicking anywhere outside the image
+    modal.onclick = function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+</html>

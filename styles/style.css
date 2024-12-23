@@ -1,0 +1,332 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    margin-left: 200px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Align name to the left and links to the right */
+    align-items: center; /* Vertically center content */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    display: inline;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4b3; /* Lighter color on hover */
+}
+
+/* Main Content Styling */
+main {
+    margin-left: 250px; /* Offset main content to the right of the sidebar */
+    padding: 2rem;
+    width: 100%;
+}
+
+section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Left-Side Navigation */
+.sidenav {
+    width: 200px; /* Fixed width */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Stays fixed on the left */
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #333, #555); /* Gradient background */
+    color: #ffffff; /* Text color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    padding: 2rem 1rem;
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sidenav nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidenav nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+.sidenav nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: block; /* Makes the clickable area larger */
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.sidenav nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    color: #f4f4f4; /* Slightly lighter text */
+    transform: translateX(5px); /* Subtle shift to the right */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+
+
+.projects {
+    margin-left: 200px; /* Align to the right of the navbar */
+    padding: 2rem;
+}
+
+
+.line-bar {
+    border: none; /* Remove default styles */
+    height: 2px; /* Thickness of the line */
+    background-color: #333; /* Line color */
+    margin: 1rem 0; /* Spacing around the line */
+    width: 100%; /* Full width */
+}
+
+.project {
+    display: flex; /* Align text and media side by side */
+    justify-content: space-between; /* Space between text and media */
+    align-items: flex-start; /* Align items at the top */
+    padding: 1rem 0; /* Spacing between projects */
+    margin-bottom: 2rem; /* Add spacing between project entries */
+    border-bottom: 1px solid #ddd; /* Optional: Add a separator between projects */
+}
+
+.biography, .research {
+    display: flex; /* Align text and media side by side */
+    justify-content: space-between; /* Space between text and media */
+    align-items: center; /* Vertically align items */
+    margin-left: 200px; /* Align sections to the right of the navbar */
+    padding: 2rem;
+}
+
+.c1 {
+    flex: 1; /* Text section takes up available space */
+    max-width: 60%; /* Limit width for better readability */
+    text-align: left; /* Align text to the left */
+    padding-right: 1rem; /* Add space between text and media */
+}
+
+.media {
+    flex: 1; /* Media section takes up available space */
+    max-width: 40%; /* Restrict media width */
+    text-align: center; /* Center align the media content */
+}
+
+.media img {
+    max-width: 100%; /* Make media responsive */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for style */
+    margin-bottom: 1rem; /* Add spacing below media */
+}
+
+.media video {
+    max-width: 100%; /* Make the video responsive */
+    max-height: 400px; /* Limit the height to control size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the video content to fill the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+.media.gallery {
+    display: flex; /* Arrange images in a row */
+    flex-wrap: wrap; /* Allow wrapping to next row on smaller screens */
+    gap: 1rem; /* Add spacing between images */
+    justify-content: space-between; /* Distribute images evenly */
+    text-align: center; /* Center-align captions */
+}
+
+.media.gallery figure {
+    flex: 1; /* Allow images to scale proportionally */
+    max-width: 30%; /* Set maximum width for each image container */
+    margin: 0; /* Remove default margin */
+}
+
+.media.gallery img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.media.gallery figcaption {
+    margin-top: 0.5rem; /* Add space above caption */
+    font-size: 0.9rem; /* Smaller font size for captions */
+    color: #555; /* Subtle color for captions */
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Image max width */
+    max-height: 80%; /* Image max height */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.modal-content:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.modal img {
+    cursor: zoom-out; /* Change cursor when hovering */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.zoomable {
+    cursor: pointer; /* Change pointer to a hand icon on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.zoomable:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.project h3 {
+    margin: 0 0 0.5rem 0; /* Add spacing below headers */
+    font-size: 1.5rem; /* Smaller than main section headers */
+    color: #333; /* Text color */
+}
+
+
+
+.portrait {
+    flex: 1; /* Allow placeholder to take some space */
+    text-align: center; /* Center the placeholder text */
+    font-size: 1.5rem; /* Increase placeholder text size */
+    color: #777; /* Add a lighter color for style */
+}
+
+.portrait img {
+
+    max-width: 300px; /* Make media responsive */
+    border-radius: 50%; /* Optional: Makes the image circular */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for style */
+    margin-bottom: 1rem; /* Add spacing below media */
+}
+
+.showVideo {
+    text-align: left; /* Align video to the left */
+    margin-top: 0px; /* Push the video down */
+    display: flex;
+    justify-content: right; /* Horizontally center the video */
+
+}
+/* Social Links */
+.social {
+    display: flex; /* Flexbox for inline layout */
+    gap: 15px; /* Add space between links */
+}
+
+.social a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Use dark gray for link color */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.social a:hover {
+    color: #777; /* Slightly lighter color on hover */
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+}
+
