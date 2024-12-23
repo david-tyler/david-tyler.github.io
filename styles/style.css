@@ -175,13 +175,13 @@ footer {
 }
 
 .media iframe {
-    width: 100%; /* Make the iframe responsive */
+    width: 400px; /* Make the iframe responsive */
     max-width: 560px; /* Set a maximum width */
     height: 300px; 
     max-height: 560px;
     margin-bottom: 1rem; /* Add spacing below the video */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for style */
-    borderradius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 
